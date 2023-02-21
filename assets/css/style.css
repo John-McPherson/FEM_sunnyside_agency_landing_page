@@ -1,0 +1,64 @@
+.barlow {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.fraunces {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+}
+.fraunces--bold {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+html * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body {
+  margin: 0;
+  padding: 0;
+}
+html body li {
+  list-style: none;
+}
+html body a {
+  text-decoration: none;
+  color: unset;
+}
+html body button {
+  background-color: unset;
+  border: unset;
+  padding: unset;
+}
+html body header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url('../images/desktop/image-header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  text-align: center;
+}
+html body header .title h1 {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-weight: 900;
+  word-spacing: 1rem;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  margin-top: 20.64vh;
+  margin-bottom: 10.32vh;
+}
+html body header .title img {
+  margin-bottom: 33.44vh;
+}
