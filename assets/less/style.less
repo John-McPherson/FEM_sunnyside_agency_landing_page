@@ -16,6 +16,10 @@ html {
             // height: 82.56vh;
             text-align: center;
 
+            @media screen and (max-width: @mobileSize) {
+                background-image: url('../images/mobile/image-header.jpg');
+            }
+
             .title {
                 h1 {
                     text-transform: uppercase;
@@ -25,14 +29,24 @@ html {
                     word-spacing: 1rem;
                     letter-spacing: .2rem;
                     font-size: 3rem;
-                    margin-top: 20.64vh;
-                    margin-bottom: 10.32vh;
+                    margin: 20.5vh 5vw 10.5vh 5vw;
+
+                    @media screen and (max-width: @mobileSize) {
+                        margin: 25.5vh 5vw 6vh 5vw;
+                        // font-size: 4rem;
+                    }
+
                     // margin: 200px 0 34px 0;
 
                 }
 
                 img {
                     margin-bottom: 33.44vh;
+
+                    @media screen and (max-width: @mobileSize) {
+                        width: 10vw;
+                        margin-bottom: 20.5vh;
+                    }
                 }
             }
 

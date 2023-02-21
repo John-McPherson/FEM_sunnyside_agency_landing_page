@@ -47,6 +47,11 @@ html body header {
   width: 100vw;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  html body header {
+    background-image: url('../images/mobile/image-header.jpg');
+  }
+}
 html body header .title h1 {
   text-transform: uppercase;
   color: hsl(0, 0%, 100%);
@@ -56,9 +61,19 @@ html body header .title h1 {
   word-spacing: 1rem;
   letter-spacing: 0.2rem;
   font-size: 3rem;
-  margin-top: 20.64vh;
-  margin-bottom: 10.32vh;
+  margin: 20.5vh 5vw 10.5vh 5vw;
+}
+@media screen and (max-width: 600px) {
+  html body header .title h1 {
+    margin: 25.5vh 5vw 6vh 5vw;
+  }
 }
 html body header .title img {
   margin-bottom: 33.44vh;
+}
+@media screen and (max-width: 600px) {
+  html body header .title img {
+    width: 10vw;
+    margin-bottom: 20.5vh;
+  }
 }
