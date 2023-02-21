@@ -32,6 +32,10 @@ html body button {
   border: unset;
   padding: unset;
 }
+html body .grid {
+  display: -ms-grid;
+  display: grid;
+}
 html body header {
   position: relative;
   display: -webkit-box;
@@ -76,4 +80,50 @@ html body header .title img {
     width: 10vw;
     margin-bottom: 20.5vh;
   }
+}
+html body main {
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body main h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 2.5em;
+  padding: 0 11vw;
+}
+html body main p {
+  padding: 4vh 11vw;
+  color: hsl(210, 4%, 67%);
+  line-height: 1.4;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+html body main a {
+  margin: 0 11vw;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+}
+html body main a:after {
+  position: absolute;
+  content: '';
+  width: 110%;
+  height: 10px;
+  background-color: yellow;
+  bottom: -2.5px;
+  left: -5%;
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+html body main img {
+  width: 100%;
 }
