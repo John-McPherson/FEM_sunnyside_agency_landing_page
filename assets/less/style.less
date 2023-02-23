@@ -235,6 +235,8 @@ html {
         }
 
         #testimonials {
+            display: grid;
+
 
             text-align: center;
             margin: 160px 0;
@@ -298,6 +300,15 @@ html {
             }
 
 
+        }
+
+        #images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+
+            >div {
+                display: flex;
+            }
         }
 
 

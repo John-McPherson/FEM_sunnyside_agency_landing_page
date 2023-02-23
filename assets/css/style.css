@@ -253,6 +253,8 @@ html body main .grid .photography h2 {
   color: hsl(198, 62%, 26%);
 }
 html body #testimonials {
+  display: -ms-grid;
+  display: grid;
   text-align: center;
   margin: 160px 0;
 }
@@ -316,4 +318,14 @@ html body #testimonials .testimonial__container .testimonial :last-child {
     -ms-grid-column-span: 1;
     grid-column: span 1;
   }
+}
+html body #images {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+html body #images > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
