@@ -329,3 +329,45 @@ html body #images > div {
   display: -ms-flexbox;
   display: flex;
 }
+html footer {
+  text-align: center;
+  background-color: #8FD4C5;
+  padding: 70px 0;
+}
+html footer img {
+  width: 168px;
+  height: auto;
+}
+html footer .links {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html footer .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+html footer .links ul li {
+  margin: 50px 25px 80px 25px;
+}
+html footer .links ul li a {
+  color: #408577;
+}
+html footer .links ul li a:hover {
+  color: hsl(0, 0%, 100%);
+}
+html footer .links.social ul li {
+  margin: 0 15px 0 15px;
+}
+html footer .links.social ul li a:hover svg path {
+  fill: hsl(0, 0%, 100%);
+}

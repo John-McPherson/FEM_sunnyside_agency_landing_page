@@ -314,4 +314,61 @@ html {
 
 
     }
+
+    footer {
+        text-align: center;
+        background-color: #8FD4C5;
+        padding: 70px 0;
+
+        img {
+
+            width: 168px;
+            height: auto;
+        }
+
+        .links {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            ul {
+                display: flex;
+                font-size: 18px;
+                .barlow;
+
+                li {
+                    margin: 50px 25px 80px 25px;
+
+                    a {
+
+                        color: #408577;
+
+                        &:hover {
+                            color: @White;
+                        }
+                    }
+                }
+            }
+
+            &.social {
+                ul {
+
+                    li {
+                        margin: 0 15px 0 15px;
+
+                        a {
+                            &:hover {
+                                svg {
+                                    path {
+                                        fill: @White;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
