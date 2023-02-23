@@ -42,10 +42,10 @@
   <header>
     <div class="title">
       <h1>We are creatives</h1>
-      <img src="./assets/images/icon-arrow-down.svg" alt="">
+      <a href="#content"><img src="./assets/images/icon-arrow-down.svg" alt=""></a>
     </div>
   </header>
-  <main>
+  <main id="content">
     <section class=" yellow grid">
       <div class="grid_item text">
         <h2>Transform your brand</h2>
@@ -56,12 +56,21 @@
         <a href="#" target="_blank">Learn more</a>
       </div>
       <div class="grid_item img">
-        <img src="./assets/images/desktop/image-transform.jpg" alt="">
+        <picture>
+          <source media="(max-width:600px)" srcset="./assets/images/mobile/image-transform.jpg">
+          <img src="./assets/images/desktop/image-transform.jpg" alt="">
+        </picture>
+
       </div>
     </section>
     <section class=" pink grid">
       <div class="grid_item img">
-        <img src="./assets/images/desktop/image-stand-out.jpg" alt="">
+        <picture>
+          <source media="(max-width:600px)" srcset="./assets/images/mobile/image-stand-out.jpg">
+          <img src="./assets/images/desktop/image-stand-out.jpg" alt="">
+        </picture>
+
+        <!-- <img src="./assets/images/desktop/image-stand-out.jpg" alt=""> -->
       </div>
       <div class="grid_item text">
         <h2> Stand out to the right audience
@@ -73,6 +82,70 @@
 
         </p>
         <a href="#" target="_blank">Learn more</a>
+      </div>
+    </section>
+    <section class="grid">
+      <div class="graphic_design grid_item">
+        <picture>
+          <source media="(max-width:600px)" srcset="./assets/images/mobile/image-graphic-design.jpg">
+          <img src="./assets/images/desktop/image-graphic-design.jpg" alt="">
+        </picture>
+
+        <div class="text">
+          <h2>
+            Graphic design
+          </h2>
+          <p> Great design makes you memorable. We deliver artwork that underscores your brand message and captures
+            potential
+            clients’ attention.
+          </p>
+        </div>
+      </div>
+      <div class="photography grid_item">
+        <picture>
+          <source media="(max-width:600px)" srcset="./assets/images/mobile/image-photography.jpg">
+          <img src="./assets/images/desktop/image-photography.jpg" alt="">
+        </picture>
+
+        <div class="text">
+          <h2>
+            Photography
+          </h2>
+          <p> Increase your credibility by getting the most stunning, high&#8209;quality photos that improve your
+            business
+            image.
+          </p>
+        </div>
+        </p>
+        </t>
+      </div>
+    </section>
+    <section id="testimonials">
+      <h2> Client testimonials</h2>
+      <div class="testimonial__container">
+        <div class="testimonial">
+          <img src="./assets/images/image-emily.jpg" alt="">
+          <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
+            hit.</p>
+          <h3>Emily R.</h3>
+          <p class="title">Marketing Director</p>
+        </div>
+        <div class="testimonial">
+          <img src="./assets/images/image-thomas.jpg" alt="">
+          <p> Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
+            enjoyable experience.
+          </p>
+          <h3> Thomas S.</h3>
+          <p class="title"> Chief Operating Officer</p>
+        </div>
+        <div class="testimonial">
+          <img src="./assets/images/image-jennie.jpg" alt="">
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+          </p>
+          <h3> Jennie F.</h3>
+          <p class="title">Business Owner</p>
+        </div>
       </div>
     </section>
   </main>
@@ -87,25 +160,16 @@
 
 
 
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
 
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
 
-  Client testimonials
 
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
 
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
+ 
+
 
   Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
   Jennie F.
-  Business Owner
+  
 
   About
   Services
