@@ -34,6 +34,7 @@ html body button {
   background-color: unset;
   border: unset;
   padding: unset;
+  cursor: pointer;
 }
 html body img {
   max-width: 100%;
@@ -48,6 +49,10 @@ html body picture {
 html body picture img {
   display: block;
 }
+html body {
+  position: relative;
+  width: 100vw;
+}
 html body .grid {
   display: -ms-grid;
   display: grid;
@@ -58,6 +63,111 @@ html body p {
   line-height: 2;
   font-family: 'Barlow', sans-serif;
   font-weight: 600;
+}
+html body nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  background-color: #3DBFFF;
+}
+html body nav ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 700px) {
+  html body nav ul:before {
+    content: "\A";
+    border-style: solid;
+    border-width: 25px 24px 0 0;
+    border-color: transparent hsl(0, 0%, 100%) transparent transparent;
+    position: absolute;
+    right: 0px;
+    top: -24px;
+  }
+}
+html body nav ul li button {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px 28px;
+  border-radius: 75px 75px;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 700px) {
+  html body nav ul li button {
+    background-color: #FCD601;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  html body nav ul li button:hover {
+    color: hsl(0, 0%, 100%);
+    background-color: #6ECEFE;
+  }
+}
+@media screen and (max-width: 700px) {
+  html body nav {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+html body nav .toggle_nav button {
+  background-image: url('../images/icon-hamburger.svg');
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 700px) {
+  html body nav .toggle_nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  html body nav [data-navopen] {
+    position: fixed;
+    left: 0;
+    top: 104px;
+    background-color: hsl(0, 0%, 100%);
+    min-width: 90%;
+    margin: 0 5%;
+  }
+  html body nav [data-navopen] ul {
+    min-height: 30vh;
+    margin: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body nav [data-navopen] ul li {
+    font-size: 1.2em;
+  }
+  html body nav [data-navopen] ul li a {
+    color: hsl(210, 4%, 67%);
+  }
+  html body nav [data-navopen][data-navopen="closed"] {
+    display: none !important;
+  }
 }
 html body header {
   position: relative;
@@ -74,7 +184,7 @@ html body header {
   width: 100vw;
   text-align: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   html body header {
     background-image: url('../images/mobile/image-header.jpg');
   }
@@ -90,7 +200,7 @@ html body header .title h1 {
   font-size: 3rem;
   margin: 20.5vh 5vw 10.5vh 5vw;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   html body header .title h1 {
     margin: 25.5vh 5vw 6vh 5vw;
   }
@@ -98,7 +208,7 @@ html body header .title h1 {
 html body header .title img {
   margin-bottom: 33.44vh;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   html body header .title img {
     width: 10vw;
     margin-bottom: 20.5vh;
@@ -107,7 +217,12 @@ html body header .title img {
 html body main .grid {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(calc(940px / 2), 1fr));
+}
+@media screen and (max-width: 1100px) {
+  html body main .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 html body main .grid .grid_item {
   width: 100%;
@@ -122,14 +237,11 @@ html body main .grid .grid_item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 html body main .grid .grid_item.text {
   padding: 0 11vw;
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1100px) {
   html body main .grid .grid_item.text {
     text-align: center;
     padding: 10vh 15vw;
@@ -150,12 +262,15 @@ html body main .grid .grid_item.text a {
   position: relative;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1100px) {
   html body main .grid .grid_item.text a {
-    -ms-flex-item-align: unset;
-        -ms-grid-row-align: unset;
-        align-self: unset;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 html body main .grid .grid_item.text a:after {
@@ -175,7 +290,7 @@ html body main .grid .grid_item.img img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1100px) {
   html body main .grid .grid_item.img {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -214,7 +329,7 @@ html body main .grid .photography .text {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   html body main .grid .graphic_design .text,
   html body main .grid .photography .text {
     height: 30%;
@@ -270,7 +385,7 @@ html body #testimonials h2 {
 html body #testimonials .testimonial__container {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(940px / 3), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(calc(1100px / 3), 1fr));
 }
 html body #testimonials .testimonial__container .testimonial {
   width: 100%;
@@ -307,13 +422,13 @@ html body #testimonials .testimonial__container .testimonial :last-child {
   margin-bottom: 0px;
   color: hsl(210, 4%, 67%);
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1100px) {
   html body #testimonials .testimonial__container > :last-of-type {
     -ms-grid-column-span: 2;
     grid-column: span 2;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   html body #testimonials .testimonial__container > :last-of-type {
     -ms-grid-column-span: 1;
     grid-column: span 1;
@@ -370,4 +485,28 @@ html footer .links.social ul li {
 }
 html footer .links.social ul li a:hover svg path {
   fill: hsl(0, 0%, 100%);
+}
+.links {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+.links ul li {
+  margin: 0px 25px;
+  font-size: 0.9em;
+}
+.links ul li a {
+  color: hsl(0, 0%, 100%);
 }
